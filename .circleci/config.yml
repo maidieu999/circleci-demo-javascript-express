@@ -8,13 +8,13 @@ workflows:
 
 commands:
   sayhello:
-    description: "A very simple comamnd for demonstation purposes"
+    description: "A very simple command for demonstration purposes"
     parameters:
       to:
         type: string
         default: "Hello World"
     steps:
-       - run: echo << paramaters.to >>
+      - run: echo << parameters.to >>
 
 defaults: &defaults
   working_directory: ~/mern-starter
