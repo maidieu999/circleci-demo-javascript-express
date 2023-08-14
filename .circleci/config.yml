@@ -60,3 +60,8 @@ jobs:
           prefix: coverage
       - store_test_results:
           path: test-results.xml
+      - run: exit 1
+      - run:
+          name: on error
+          command: echo "Hello Error!"
+          when: on_fail
